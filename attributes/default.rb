@@ -15,6 +15,7 @@ default['logstash']['elasticsearch_cluster'] = 'logstash'
 default['logstash']['elasticsearch_ip'] = ''
 default['logstash']['elasticsearch_port'] = ''
 default['logstash']['graphite_ip'] = ''
+default['logstash']['elasticsearch_template'] = ''
 
 default['logstash']['patterns'] = {}
 default['logstash']['install_zeromq'] = false
