@@ -139,8 +139,7 @@ template "#{node['logstash']['basedir']}/server/etc/logstash.conf" do
             :es_server_ip => es_server_ip,
             :enable_embedded_es => node['logstash']['server']['enable_embedded_es'],
             :es_cluster => node['logstash']['elasticsearch_cluster'],
-            :patterns_dir => patterns_dir,
-            :es_template => node['logstash']['elasticsearch_template'])
+            :patterns_dir => patterns_dir)
   notifies :restart, service_resource
   action :create
 end

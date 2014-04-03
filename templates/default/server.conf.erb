@@ -22,7 +22,7 @@ output {
   elasticsearch { embedded => true }
   <% elsif not @es_server_ip.empty? -%>
   elasticsearch { host => "<%= @es_server_ip %>" cluster => "<%= @es_cluster -%>"
-  <% unless @es_template.empty? -%> template => "<%= @es_template -%>" <% end -%>
+  <% unless node['logstash']['elasticsearch_template'].empty? -%> template => "<%= node['logstash']['elasticsearch_template'] -%>" <% end -%>
   }
   <% end -%>
   <% unless @graphite_server_ip.empty? -%>
